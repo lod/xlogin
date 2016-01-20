@@ -1,0 +1,21 @@
+#!/usr/bin/make -f
+# output every command that modifies files on the build system.
+#export DH_VERBOSE = 1
+
+# Empty rules because no compilation is necessary
+build: ;
+build-arch: ;
+build-indep: ;
+binary-arch: ;
+
+clean:
+	dh clean
+
+binary: binary-indep
+binary-indep:
+	make install DESTDIR=debian/xlogin BASH=/bin/bash
+	dh_installdocs -i
+	dh_installdeb -i
+	dh_gencontrol -i
+	dh_md5sums -i
+	dh_builddeb -i

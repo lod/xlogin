@@ -1,0 +1,19 @@
+xlogin for Debian
+=================
+
+Required Preperation
+--------------------
+
+The user must have a .xinitrc script in their home directory.
+You can symlink this file to /etc/X11/xinit/xinitrc if you wish.
+
+Usage
+-----
+
+To enable automatic login at boot execute:
+# systemctl enable xlogin@<username>
+
+Note
+----
+
+Using this program bypasses your login password decreasing your device's security.

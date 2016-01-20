@@ -1,0 +1,16 @@
+Source: xlogin
+Section: x11
+Priority: optional
+Maintainer: David Tulloh <debian-david@tulloh.id.au>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.6
+Homepage: https://github.com/joukewitteveen/xlogin
+Vcs-Git: git@github.com:lod/xlogin.git
+Vcs-Browser: https://github.com/lod/xlogin
+
+Package: xlogin
+Architecture: all
+Depends: systemd, xinit, xserver-xorg, ${misc:Depends}
+Description: Enables automatic login to X on boot
+ A set of systemd and helper scripts to automatically log a designated
+ user in to the system and start X.
